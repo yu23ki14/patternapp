@@ -1,0 +1,44 @@
+class RetouchQuestions2 < ActiveRecord::Migration
+  def change
+    add_column :questions, :no0, :integer
+    add_column :questions, :no1, :integer
+    add_column :questions, :no2, :integer
+    add_column :questions, :no3, :integer
+    add_column :questions, :no4, :integer
+    add_column :questions, :no5, :integer
+    add_column :questions, :no6, :integer
+    add_column :questions, :no7, :integer
+    add_column :questions, :no8, :integer
+    add_column :questions, :no9, :integer
+    add_column :questions, :no10, :integer
+    add_column :questions, :no11, :integer
+    add_column :questions, :no12, :integer
+    add_column :questions, :no13, :integer
+    add_column :questions, :no14, :integer
+    add_column :questions, :no15, :integer
+    add_column :questions, :no16, :integer
+    add_column :questions, :no17, :integer
+    add_column :questions, :no18, :integer
+    add_column :questions, :no19, :integer
+    add_column :questions, :no20, :integer
+    add_column :questions, :no21, :integer
+    add_column :questions, :no22, :integer
+    add_column :questions, :no23, :integer
+    add_column :questions, :no24, :integer
+    add_column :questions, :no25, :integer
+    add_column :questions, :no26, :integer
+    add_column :questions, :no27, :integer
+    add_column :questions, :no28, :integer
+    add_column :questions, :no29, :integer
+    add_column :questions, :no30, :integer
+    add_column :questions, :no31, :integer
+    add_column :questions, :no32, :integer
+    add_column :questions, :no33, :integer
+    add_column :questions, :no34, :integer
+    add_column :questions, :no35, :integer
+    add_column :questions, :no36, :integer
+    add_column :questions, :no37, :integer
+    add_column :questions, :no38, :integer
+    add_column :questions, :no39, :integer
+  end
+end

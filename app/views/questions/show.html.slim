@@ -1,0 +1,12 @@
+.page-container.questions-show
+  .graphs.page-container
+    .chart
+      = high_chart("radar", @graph)
+  
+  
+  h3.text-center
+    | 過去の記録
+  .logcontainer.col-9.col-center
+    - @yourresults.each do |results|
+      .results.p-y-15.text-center.h4.m-t-0.m-b-0
+        = link_to "#{results[:created_at].strftime('%Y年%m月%d日 %H時')}", "/questions/#{results[:id]}"

@@ -1,0 +1,6 @@
+.page-container.objective_container
+  .chart
+    = high_chart("radar", @objective_graph)
+
+  .col-8.col-center.row-space-top-6
+    = link_to '新しい目標を立てる', new_objective_path, class: "h4 text-center col-12 col-center"

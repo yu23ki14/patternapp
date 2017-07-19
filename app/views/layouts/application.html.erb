@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patterns app</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag('fav.jpg') %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<!--<p><%= notice %></p>
+<p><%= alert %></p>-->
+
+<% if user_signed_in? %>
+  <div class="nav nav-pills">
+    <div class="col-7 col-md-3">
+      <h1>Patterns App</h1>
+    </div>
+    <div class="pull-right m-r-10" >
+      <p class="h4" id="menuopen">menu</p>
+    </div>
+    <ul class="col-4 menu">
+      <li class="menulinks p-y-5">
+        <p class="h4"><a href="/">Dashboard</a></p>
+      </li>
+      <li class="menulinks p-y-5">
+        <p class="h4"><%= link_to "診断", questions_path%></p>
+      </li>
+      <li class="menulinks p-y-5">
+        <p class="h4"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+      </li>
+      <li class="menulinks row-space-top-2">
+        <p class="h4" id="menuclose">× close</p>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row-space-top-5 row-space-5">
+  <%= yield %>
+</div>
+
+<script>
+  $('#menuopen').click(function(){
+    $('.nav').addClass('menuopenning')
+  });
+  $('#menuclose').click(function(){
+    $('.nav').removeClass('menuopenning')
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+= form_for @question do |f|
+  table
+    = f.hidden_field :user_id, :value => "#{current_user[:id]}"
+    = f.hidden_field :title, :value => "learningpatterns"
+    - @patterns.each do |patterns|
+      .col-12.row-space-3
+        = f.check_box name="no#{patterns[:no]}",{:checked=>false}, 1, 0
+        = f.label "no#{patterns[:no]}", :class => 'col-12 col-md-4 col-cener pattern-card'
+          p.row-space-top-2 #{patterns[:no]}
+          .co-12.col-center.row-space-top-4
+            h3.text-center #{patterns[:name]}
+          .col-10.col-center.illust.row-space-top-4 style="background-image:url(#{asset_path "learning/#{patterns[:no]}@2x.png"})"
+          .col-10.col-center.row-space-top-4
+            p.text-center #{patterns[:solution]}
+        
+    = f.submit "Send", class: "btn-primary btn-lg col-12 col-center"
